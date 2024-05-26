@@ -1,0 +1,68 @@
+.button {
+  @apply rounded-lg text-button py-2 px-4 h-8 box-border border-0 flex justify-center items-center transition duration-1000 ease-in-out relative;
+}
+.button.primary {
+  @apply bg-primary-base-default border-primary-base-default text-primary-on-high-emphasis hover:bg-primary-base-bright hover:border-primary-base-bright
+          disabled:bg-primary-base-disabled disabled:text-primary-on-low-emphasis disabled:border-primary-base-disabled
+          focus:shadow-primary focus:outline-none;
+}
+.button.secondary {
+  @apply bg-secondary-base-default border-secondary-base-default text-secondary-on-high-emphasis hover:bg-secondary-base-bright hover:border-secondary-base-bright
+          disabled:bg-secondary-base-dim disabled:text-secondary-on-low-emphasis disabled:border-secondary-base-dim
+          focus:shadow-secondary focus:outline-none;
+}
+.button.danger {
+  @apply bg-alert-error-default border-alert-error-default text-alert-error-brighter hover:text-alert-error-bright hover:border-alert-error-dim
+          disabled:border-alert-error-dim disabled:text-alert-error-bright
+          focus:shadow-danger focus:outline-none;
+}
+
+.button.btn-outline {
+  @apply border bg-base-transparent text-surface-on-high-emphasis hover:bg-base-transparent
+          disabled:bg-base-transparent disabled:text-surface-on-low-emphasis  !important;
+}
+.button.filled-text-only {
+  @apply border-0 bg-base-transparent disabled:bg-base-transparent disabled:text-surface-on-low-emphasis;
+}
+.button.text-only-outline {
+  @apply border-base-transparent bg-base-transparent hover:border hover:bg-base-transparent disabled:bg-base-transparent border-0 disabled:text-surface-on-low-emphasis;
+}
+.button.danger.small.disabled {
+  @apply bg-alert-error-dim text-surface-on-low-emphasis;
+}
+
+.button.small {
+  @apply h-7;
+}
+.button img {
+  @apply w-5 h-5;
+}
+.button.loading > .text,
+.button.loading > .suffix,
+.button.loading > .prefix {
+  @apply hidden;
+}
+.loading.primary,
+.loading.primary.filled-text-only {
+  @apply bg-primary-base-disabled;
+}
+.loading.primary.btn-outline,
+.loading.primary.btn-outline.button.text-only-outline {
+  @apply border-primary-base-disabled;
+}
+.loading.secondary,
+.loading.secondary.filled-text-only {
+  @apply bg-secondary-base-dim;
+}
+.loading.secondary.btn-outline,
+.loading.secondary.btn-outline.button.text-only-outline {
+  @apply border-secondary-base-dim;
+}
+.loading.danger,
+.loading.danger.filled-text-only {
+  @apply bg-alert-error-dim;
+}
+.loading.danger.btn-outline,
+.loading.danger.btn-outline.button.text-only-outline {
+  @apply border-alert-error-dim;
+}
